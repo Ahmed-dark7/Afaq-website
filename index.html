@@ -8,18 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     </head>
 <body>
     <section class="landing-page" id="one">
         <div class="overlay"></div>
         <header>
-            <div class="logo"></div>
+            <a href="#one" class="logo">
+                <img src="images/logo.jpg" alt="logo">
+            </a>
+            <nav>
+                <ul class="links-nav">
+                    <li><a href="#one" class="active">home</a></li>
+                    <li><a href="#book">book</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
             <ul class="links">
                 <li><a href="#one" class="active">home</a></li>
-                <li><a href="">Service</a></li>
+                <li><a href="#book">book</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
+            <button class="list"><i class="fa-solid fa-list"></i></button>
         </header>
         <article class="bio">
             <h1>آفَاقُ</h1>
@@ -33,7 +45,7 @@
             </p>
         </article>
     </section>
-    <section class="book">
+    <section id="book">
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
@@ -62,7 +74,7 @@
         </div>
     </section>
     <section>
-        
+
     </section>
     <script src="js/master.js"></script>
 </body>

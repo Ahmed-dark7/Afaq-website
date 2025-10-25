@@ -45,14 +45,15 @@ p{
     z-index: 2;
     position: fixed;
     display: flex;
-    padding: 10px;
 }
-.landing-page header .logo{
-    background-image: url(../images/logo.jpg);
-    background-size: cover;
+.landing-page header .logo img{
     width: 90px;
     height: 50px;
     border-radius: 25%;
+    margin: 10px;
+}
+.landing-page header nav{
+    visibility: hidden; /*nav button*/
 }
 .landing-page header .links{
     list-style: none;
@@ -66,6 +67,11 @@ p{
     margin-left: 20px;
     text-transform: capitalize;
 }
+.landing-page header .links li:hover{
+    font-size: 27px;
+    transform: translateY(-6px);
+    transition: all 0.5s;
+}
 .landing-page header .links li a{
     text-decoration: none;
     color: #fff;
@@ -74,6 +80,9 @@ p{
 .landing-page header .links li a:hover,
 .landing-page header .links li a.active{
     color: var(--main-color);
+}
+.landing-page header button{
+    visibility: hidden;
 }
 .landing-page .bio{
     color: #fff;
@@ -100,8 +109,10 @@ p{
 /* End Landing section */
 
 /* Start book section */
-.book{
-    background-color: var(--main-color-2);
+#book{
+    height: 100vh;
+    background-image: url(../images/book.jpg);
+    background-size: cover;
     display: flex;
 }
 
@@ -109,7 +120,7 @@ p{
     min-width: 290px;
     height: 400px;
     perspective: 1000px;
-    margin: 50px;
+    margin: auto 50px;
 }
 
 .card-inner {    
@@ -154,16 +165,14 @@ p{
 .card-back ul li{
     margin: 10px;
 }
-.book .text{
+#book .text{
     margin: auto 10px;
 }
-.book .text p{
+#book .text p{
     text-align: right;
     color: var(--white);
-    font-size: 25px;
     font-weight: 400;
     font-size: 40px;
-
 }
 /* End book section */
 
@@ -175,11 +184,75 @@ p{
 /* End Animations */
 
 
-@media (max-width : 700px) {
-    .book{
+@media (max-width : 1024px){
+    /* Start landing page section in sm-screen */
+    .landing-page header .logo img{
+        margin-top: 25px;
+    }
+    .landing-page header .links{
+        visibility: hidden;
+    }
+    .landing-page header button{
+        font-size: 30px;
+        color: var(--white);
+        background-color: transparent;
+        border: none;
+        visibility: visible;
+        margin: 10px;
+    }
+    .landing-page header button:hover{
+        color: var(--main-color);
+        cursor: pointer;
+    }
+    .landing-page header{
+        position: relative;
+    }
+    .landing-page header nav{
+        width: 25%;
+        color: var(--white);
+        background-color: var(--main-color-2);
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 10px 0 0 10px;
+        transition: all 0.5s;
+    }
+    .landing-page header nav ul{
+        list-style: none;
+    }
+    .landing-page header nav ul li{
+        margin: 10px;
+    }
+    .landing-page header nav ul li a{
+        text-decoration: none;
+        color: var(--white);
+    }
+    .landing-page header nav ul li a:hover,
+    .landing-page header nav ul li a.active{
+        color: var(--main-color);
+        transition: all .6s;
+    }
+    .landing-page header nav ul li a:hover{
+        transform: scale(2);
+    }
+    .landing-page .bio p{
+        line-height: 30px;
+        font-size: 20px;
+    }
+    /* End landing page section in sm-screen */
+    /* Start book section in sm-screen */
+    #book{
         flex-wrap: wrap;
+        height: 100vh;
     }
     .card{
         margin: 25px auto;
     }
+    #book .text{
+        margin: 10px;
+    }
+    #book .text p{
+        font-size: 25px;
+    }
+    /* End book section in sm-screen */
 }
