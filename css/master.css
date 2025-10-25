@@ -22,9 +22,11 @@ p{
     line-height: 40px;
     word-spacing: 3px;
 }
+section{
+    height: 100vh;
+}
 /* Start Landing section */
 .landing-page{
-    min-height: 100vh;
     background-image: url(../images/1.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -66,9 +68,9 @@ p{
     display: inline-block;
     margin-left: 20px;
     text-transform: capitalize;
+    font-size: 25px ;
 }
 .landing-page header .links li:hover{
-    font-size: 27px;
     transform: translateY(-6px);
     transition: all 0.5s;
 }
@@ -80,6 +82,9 @@ p{
 .landing-page header .links li a:hover,
 .landing-page header .links li a.active{
     color: var(--main-color);
+}
+.landing-page header .links li a.active{
+    font-size: 30px;
 }
 .landing-page header button{
     visibility: hidden;
@@ -110,19 +115,16 @@ p{
 
 /* Start book section */
 #book{
-    height: 100vh;
     background-image: url(../images/book.jpg);
     background-size: cover;
     display: flex;
 }
-
 .card {
     min-width: 290px;
     height: 400px;
     perspective: 1000px;
     margin: auto 50px;
 }
-
 .card-inner {    
     position: relative;
     width: 100%;
@@ -130,11 +132,9 @@ p{
     transform-style: preserve-3d;
     transition: transform 0.8s;
 }
-
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
-
 .card-front,
 .card-back {
     position: absolute;
@@ -156,7 +156,7 @@ p{
 }
 .card-back p{
     font-size: 30px;
-    text-align: right;
+    text-align: center;
 }
 .card-back ul{
     list-style: none;
@@ -164,7 +164,9 @@ p{
 }
 .card-back ul li{
     margin: 10px;
+    text-align: center;
 }
+
 #book .text{
     margin: auto 10px;
 }
@@ -175,6 +177,59 @@ p{
     font-size: 40px;
 }
 /* End book section */
+
+/* Start books section */
+#books{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-image: url(../images/books.jpg);
+    background-size: cover;
+}
+#books .card-back{
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+#books .book-1{
+    background-image: url(../images/book1.jpg);
+    background-size: cover;
+}
+#books .book-2{
+    background-image: url(../images/book2.jpg);
+    background-size: cover;
+}
+#books .book-3{
+    background-image: url(../images/book3.jpg);
+    background-size: cover;
+}
+#books .book-b1{
+    background-color: #a08870;
+}
+#books .book-b2{
+    background-color: #09161e;
+}
+#books .book-b3{
+    background-color: #bbe1ec;
+}
+#books button{
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    position: absolute;
+    bottom: 8%;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--main-color-2);
+    color: var(--white);
+}
+#books button:hover{
+    box-shadow: 0 0 10px 8px var(--main-color-2);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+/* End books section */
 
 
 
@@ -216,6 +271,7 @@ p{
         right: 0;
         border-radius: 10px 0 0 10px;
         transition: all 0.5s;
+        z-index: 9999;
     }
     .landing-page header nav ul{
         list-style: none;
@@ -234,6 +290,9 @@ p{
     }
     .landing-page header nav ul li a:hover{
         transform: scale(2);
+    }
+    .landing-page .bio{
+        z-index: 1;
     }
     .landing-page .bio p{
         line-height: 30px;
@@ -256,4 +315,21 @@ p{
         line-height: 24px;
     }
     /* End book section in sm-screen */
+    /* Start books section in sm-screen */
+    #books .card{
+        height: 200px;
+        margin: 10px;
+    }
+    #books button{
+    width: 60px;
+    padding: 5px;
+    position: absolute;
+    bottom: 8%;
+    right: 1%;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--main-color-2);
+    color: var(--white);
+}
+    /* End books section in sm-screen */
 }
