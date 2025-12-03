@@ -2,35 +2,33 @@
     --main-color : #583012;
     --main-color-2 :#a86e45;
     --second-color : #b4b6b5;
-    --white : #fffffd;
+    --white : #fffffd
 }
-::-webkit-scrollbar{
-    width: 0;
-}
+::-webkit-scrollbar{width: 0}
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 body{
     font-family: "Lateef", serif;
-    font-style: normal;
+    font-style: normal
 }
 p{
     direction: rtl;
     line-height: 40px;
-    word-spacing: 3px;
+    word-spacing: 3px
 }
-section{
-    height: 100vh;
-}
+section,
+footer{height: 100vh}
+
 /* Start Landing section */
 .landing-page{
     background-image: url(../images/1.jpg);
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
+    position: relative
 }
 .landing-page .overlay{
     position: absolute;
@@ -39,56 +37,48 @@ section{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0,0.4);
-    z-index: 1;
+    z-index: 1
 }
 .landing-page header{
     width: 100%;
     color: #fff;
     z-index: 2;
     position: fixed;
-    display: flex;
+    display: flex
 }
 .landing-page header .logo img{
     width: 90px;
     height: 50px;
     border-radius: 25%;
-    margin: 10px;
+    margin: 10px
 }
-.landing-page header nav{
-    visibility: hidden; /*nav button*/
-}
+.landing-page header nav{visibility: hidden} /*nav button*/
 .landing-page header .links{
     list-style: none;
     padding: 15px 20px 0 0;
     width: 100%;
     text-align: right;
-    font-size: 25px;
+    font-size: 25px
 }
 .landing-page header .links li{
     display: inline-block;
     margin-left: 20px;
     text-transform: capitalize;
-    font-size: 25px ;
+    font-size: 25px
 }
 .landing-page header .links li:hover{
     transform: translateY(-6px);
-    transition: all 0.5s;
+    transition: all 0.5s
 }
 .landing-page header .links li a{
     text-decoration: none;
     color: #fff;
-    transition: 0.3s;
+    transition: 0.3s
 }
 .landing-page header .links li a:hover,
-.landing-page header .links li a.active{
-    color: var(--main-color);
-}
-.landing-page header .links li a.active{
-    font-size: 30px;
-}
-.landing-page header button{
-    visibility: hidden;
-}
+.landing-page header .links li a.active{color: var(--main-color)}
+.landing-page header .links li a.active{font-size: 30px}
+.landing-page header button{visibility: hidden}
 .landing-page .bio{
     color: #fff;
     position: absolute;
@@ -98,18 +88,18 @@ section{
     z-index: 2;
     text-align: center;
     min-width: 350px;
-    max-height: 200px;
+    max-height: 200px
 }
 .landing-page .bio h1{
     margin-bottom: 5px;
     font-size: 55px;
-    color: var(--main-color-2);
+    color: var(--main-color-2)
 }
 .landing-page .bio p{
     font-size: 25px;
     font-weight: 500;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.6
 }
 /* End Landing section */
 
@@ -117,24 +107,22 @@ section{
 #book{
     background-image: url(../images/book.jpg);
     background-size: cover;
-    display: flex;
+    display: flex
 }
 .card {
     min-width: 290px;
     height: 400px;
     perspective: 1000px;
-    margin: auto 50px;
+    margin: auto 50px
 }
 .card-inner {    
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.8s;
+    transition: transform 0.8s
 }
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
+.card:hover .card-inner {transform: rotateY(180deg)}
 .card-front,
 .card-back {
     position: absolute;
@@ -143,38 +131,35 @@ section{
     backface-visibility: hidden;
     border-radius: 15px;
     color: var(--white);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2)
 }
 .card-front{
     background-image: url(../images/landingPageBook.jpg);
-    background-size: cover;
+    background-size: cover
 }
 .card-back{
     transform: rotateY(180deg);
     padding: 20px;
-    background-color: #363241;
+    background-color: #363241
 }
 .card-back p{
     font-size: 30px;
-    text-align: center;
+    text-align: center
 }
 .card-back ul{
     list-style: none;
-    direction: rtl;
+    direction: rtl
 }
 .card-back ul li{
     margin: 10px;
-    text-align: center;
+    text-align: center
 }
-
-#book .text{
-    margin: auto 10px;
-}
+#book .text{margin: auto 10px}
 #book .text p{
     text-align: right;
     color: var(--white);
     font-weight: 400;
-    font-size: 40px;
+    font-size: 40px
 }
 /* End book section */
 
@@ -186,82 +171,135 @@ section{
     flex-wrap: wrap;
     position: relative;
     background-image: url(../images/books.jpg);
-    background-size: cover;
+    background-size: cover
 }
+#books .card{min-width: 240px}
 #books .card-back{
     transform: rotateY(180deg);
-    padding: 20px;
+    padding: 20px
 }
 #books .book-1{
     background-image: url(../images/book1.jpg);
     background-size: cover;
+    background-color: #a08870
 }
 #books .book-2{
     background-image: url(../images/book2.jpg);
     background-size: cover;
+    background-color: #09161e
 }
 #books .book-3{
     background-image: url(../images/book3.jpg);
     background-size: cover;
+    background-color: #bbe1ec
 }
-#books .book-b1{
-    background-color: #a08870;
-}
-#books .book-b2{
-    background-color: #09161e;
-}
-#books .book-b3{
-    background-color: #bbe1ec;
-}
-#books button{
+#books a,
+#events a{
     width: 100%;
     max-width: 400px;
     padding: 5px;
     position: absolute;
-    bottom: 8%;
+    bottom: 5%;
     border-radius: 25px;
     border: none;
     background-color: var(--main-color-2);
     color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px
 }
-#books button:hover{
+#books a:hover,
+#events a:hover{
     box-shadow: 0 0 10px 8px var(--main-color-2);
-    transform: scale(1.1);
-    transition: all 0.5s;
+    transition: all 0.5s
 }
 /* End books section */
 
+/* Start events section */
+#events{
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas:
+    "box-3 box-4 box-1"
+    "box-3 box-4 box-1"
+    "box-2 box-2 box-1";
+    gap: 10px;
+    background-color: var(--main-color-2);
+    position: relative
+}
+#events .event{
+    background-color: var(--main-color);
+    border-radius: 20px;
+    padding: 10px
+}
+#events .event:nth-child(1){
+    background-image: url(../images/prize.jpg);
+    background-size: cover
+}
+#events .event:nth-child(2) p{
+    font-size: 30px;
+    color: var(--white)
+}
+#events .event:nth-child(4),
+#events .event:nth-child(3){
+    position: relative;
+    overflow: hidden
+}
+#events .event:nth-child(3){
+    background-image: url(../images/free-pens.jpg);
+    background-size: cover
+}
+#events .event:nth-child(4){
+    background-image: url(../images/course.jpg);
+    background-size: cover
+}
+#events .event:nth-child(3) div,
+#events .event:nth-child(4) div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    background: linear-gradient(to top, var(--main-color), rgba(0,0,0,0));
+    border-radius: 0 0 20px
+}
+#events .event:nth-child(3) div p,
+#events .event:nth-child(4) div p{font-size: 25px}
+#events a{
+    left: 50%;
+    transform: translate(-50%) /*the main style in books section*/
+}
+/* End events section */
 
+/* Start footer section */
+footer{
+    
+}
+/* End footer section */
 
-
-/* Start Animations */
-
-/* End Animations */
-
-
+/*Start media query for small screen*/ 
 @media (max-width : 1024px){
     /* Start landing page section in sm-screen */
-    .landing-page header .logo img{
-        margin-top: 25px;
-    }
-    .landing-page header .links{
-        visibility: hidden;
-    }
+    .landing-page header .logo img{margin-top: 25px}
+    .landing-page header .links{visibility: hidden}
     .landing-page header button{
         font-size: 30px;
         color: var(--white);
         background-color: transparent;
         border: none;
         visibility: visible;
-        margin: 10px;
+        margin: 10px
     }
     .landing-page header button:hover{
         color: var(--main-color);
-        cursor: pointer;
+        cursor: pointer
     }
-    .landing-page header{
-        position: fixed;
-    }
+    .landing-page header{position: fixed}
     .landing-page header nav{
         width: 25%;
         color: var(--white);
@@ -271,65 +309,62 @@ section{
         right: 0;
         border-radius: 10px 0 0 10px;
         transition: all 0.5s;
-        z-index: 9999;
+        z-index: 9999
     }
-    .landing-page header nav ul{
-        list-style: none;
-    }
-    .landing-page header nav ul li{
-        margin: 10px;
-    }
+    .landing-page header nav ul{list-style: none}
+    .landing-page header nav ul li{margin: 10px}
     .landing-page header nav ul li a{
         text-decoration: none;
-        color: var(--white);
+        color: var(--white)
     }
     .landing-page header nav ul li a:hover,
     .landing-page header nav ul li a.active{
         color: var(--main-color);
-        transition: all .6s;
+        transition: all .6s
     }
-    .landing-page header nav ul li a:hover{
-        transform: scale(2);
-    }
-    .landing-page .bio{
-        z-index: 1;
-    }
+    .landing-page header nav ul li a:hover{transform: scale(2)}
+    .landing-page .bio{z-index: 1}
     .landing-page .bio p{
         line-height: 30px;
-        font-size: 20px;
+        font-size: 20px
     }
     /* End landing page section in sm-screen */
+    
     /* Start book section in sm-screen */
     #book{
         flex-wrap: wrap;
-        height: 100vh;
+        height: 100vh
     }
-    .card{
-        margin: 25px auto;
-    }
-    #book .text{
-        margin: 10px;
-    }
+    #book .card{margin: 25px auto}
+    #book .text{margin: 10px}
     #book .text p{
         font-size: 25px;
-        line-height: 24px;
+        line-height: 24px
     }
     /* End book section in sm-screen */
+    
     /* Start books section in sm-screen */
     #books .card{
         height: 200px;
-        margin: 10px;
+        margin: 10px
     }
-    #books button{
-    width: 60px;
-    padding: 5px;
-    position: absolute;
-    bottom: 8%;
-    right: 1%;
-    border-radius: 25px;
-    border: none;
-    background-color: var(--main-color-2);
-    color: var(--white);
-}
+    #books a,
+    #events a{bottom: 15px}
     /* End books section in sm-screen */
+
+    /* Start events section in sm-screen */
+    #events{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas:
+        "box-3 box-4"
+        "box-1 box-1"
+        "box-1 box-1"
+        "box-2 box-2";
+        gap: 5px;
+        background-color: var(--main-color-2)
+    }
+    /* End events section in sm-screen */
 }
+/*End media query for small screen*/ 
