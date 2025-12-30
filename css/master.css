@@ -1,8 +1,10 @@
 :root{
-    --main-color : #583012;
-    --main-color-2 :#a86e45;
-    --second-color : #b4b6b5;
-    --white : #fffffd
+    --primary-color : #5A3A29;
+    --secondary-color :#C19A6B;
+    --text-primary-color : #2B1B12;
+    --text-secondary-color : #6F4E37;
+    --background: #D2B48C;
+    --button : #8B5A2B
 }
 ::-webkit-scrollbar{width: 0}
 *{
@@ -13,21 +15,22 @@
 }
 body{
     font-family: "Lateef", serif;
-    font-style: normal
+    font-style: normal;
+    background-color: var(--background)
 }
 p{
     direction: rtl;
     line-height: 40px;
     word-spacing: 3px
 }
-section,
-footer{height: 100vh}
+section,footer{height: 100vh}
 
 /* Start Landing section */
 .landing-page{
-    background-image: url(../images/1.jpg);
+    background-image: url(../images/1.jfif);
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     position: relative
 }
 .landing-page .overlay{
@@ -36,21 +39,20 @@ footer{height: 100vh}
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0,0.4);
+    background-color: rgba(0, 0, 0,0.3);
     z-index: 1
 }
 .landing-page header{
     width: 100%;
-    color: #fff;
     z-index: 2;
     position: fixed;
     display: flex
 }
-.landing-page header .logo img{
-    width: 90px;
-    height: 50px;
-    border-radius: 25%;
-    margin: 10px
+.landing-page header .logo{
+    margin: 8px 15px;
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--text-primary-color)
 }
 .landing-page header nav{visibility: hidden} /*nav button*/
 .landing-page header .links{
@@ -72,15 +74,15 @@ footer{height: 100vh}
 }
 .landing-page header .links li a{
     text-decoration: none;
-    color: #fff;
+    color: var(--text-secondary-color);
     transition: 0.3s
 }
 .landing-page header .links li a:hover,
-.landing-page header .links li a.active{color: var(--main-color)}
+.landing-page header .links li a.active{color: var(--text-primary-color)}
 .landing-page header .links li a.active{font-size: 30px}
 .landing-page header button{visibility: hidden}
 .landing-page .bio{
-    color: #fff;
+    color: var(--text-primary-color);
     position: absolute;
     left: 50%;
     top: 25%;
@@ -93,7 +95,7 @@ footer{height: 100vh}
 .landing-page .bio h1{
     margin-bottom: 5px;
     font-size: 55px;
-    color: var(--main-color-2)
+    color: var(--text-primary-color)
 }
 .landing-page .bio p{
     font-size: 25px;
@@ -104,11 +106,7 @@ footer{height: 100vh}
 /* End Landing section */
 
 /* Start book section */
-#book{
-    background-image: url(../images/book.jpg);
-    background-size: cover;
-    display: flex
-}
+#book{display: flex}
 .card {
     min-width: 290px;
     height: 400px;
@@ -130,7 +128,7 @@ footer{height: 100vh}
     height: 100%;
     backface-visibility: hidden;
     border-radius: 15px;
-    color: var(--white);
+    color: var(--secondary-color);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2)
 }
 .card-front{
@@ -142,22 +140,13 @@ footer{height: 100vh}
     padding: 20px;
     background-color: #363241
 }
-.card-back p{
-    font-size: 30px;
-    text-align: center
-}
-.card-back ul{
-    list-style: none;
-    direction: rtl
-}
-.card-back ul li{
-    margin: 10px;
-    text-align: center
-}
+.card-back p{font-size: 30px; text-align: center}
+.card-back ul{list-style: none; direction: rtl}
+.card-back ul li{margin: 10px; text-align: center}
 #book .text{margin: auto 10px}
 #book .text p{
     text-align: right;
-    color: var(--white);
+    color: var(--text-secondary-color);
     font-weight: 400;
     font-size: 40px
 }
@@ -169,15 +158,10 @@ footer{height: 100vh}
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    position: relative;
-    background-image: url(../images/books.jpg);
-    background-size: cover
+    position: relative
 }
 #books .card{min-width: 240px}
-#books .card-back{
-    transform: rotateY(180deg);
-    padding: 20px
-}
+#books .card-back{transform: rotateY(180deg); padding: 20px}
 #books .book-1{
     background-image: url(../images/book1.jpg);
     background-size: cover;
@@ -202,8 +186,8 @@ footer{height: 100vh}
     bottom: 5%;
     border-radius: 25px;
     border: none;
-    background-color: var(--main-color-2);
-    color: var(--white);
+    background: linear-gradient(180deg, var(--secondary-color), var(--button), var(--primary-color));
+    color: var(--text-primary-color);
     text-decoration: none;
     text-align: center;
     font-size: 20px;
@@ -212,14 +196,14 @@ footer{height: 100vh}
 }
 #books a:hover,
 #events a:hover{
-    box-shadow: 0 0 10px 8px var(--main-color-2);
+    box-shadow: 0 0 10px 8px var(--secondary-color);
     transition: all 0.5s
 }
 /* End books section */
 
 /* Start events section */
 #events{
-    padding: 5px;
+    padding: 20px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -227,28 +211,20 @@ footer{height: 100vh}
     "box-3 box-4 box-1"
     "box-3 box-4 box-1"
     "box-2 box-2 box-1";
-    gap: 10px;
-    background-color: var(--main-color-2);
+    gap: 35px;
     position: relative
 }
-#events .event{
-    background-color: var(--main-color);
-    border-radius: 20px;
-    padding: 10px
-}
+#events .event{border-radius: 20px; padding: 10px}
 #events .event:nth-child(1){
     background-image: url(../images/prize.jpg);
     background-size: cover
 }
 #events .event:nth-child(2) p{
     font-size: 30px;
-    color: var(--white)
+    color: var(--text-secondary-color)
 }
 #events .event:nth-child(4),
-#events .event:nth-child(3){
-    position: relative;
-    overflow: hidden
-}
+#events .event:nth-child(3){position: relative; overflow: hidden}
 #events .event:nth-child(3){
     background-image: url(../images/free-pens.jpg);
     background-size: cover
@@ -264,8 +240,8 @@ footer{height: 100vh}
     right: 0;
     width: 100%;
     padding: 10px;
-    color: var(--white);
-    background: linear-gradient(to top, var(--main-color), rgba(0,0,0,0));
+    color: var(--background);
+    background: linear-gradient(to top, var(--primary-color), rgba(0,0,0,0));
     border-radius: 0 0 20px
 }
 #events .event:nth-child(3) div p,
@@ -278,9 +254,33 @@ footer{height: 100vh}
 
 /* Start footer section */
 footer{
-    
+    background-color: var(--secondary-color);
 }
 /* End footer section */
+
+
+
+
+
+
+
+/*ُedit the colors to media query!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Start media query for small screen*/ 
 @media (max-width : 1024px){
@@ -296,7 +296,7 @@ footer{
         margin: 10px
     }
     .landing-page header button:hover{
-        color: var(--main-color);
+        color: var(--Primary-color);
         cursor: pointer
     }
     .landing-page header{position: fixed}
@@ -319,7 +319,7 @@ footer{
     }
     .landing-page header nav ul li a:hover,
     .landing-page header nav ul li a.active{
-        color: var(--main-color);
+        color: var(--Primary-color);
         transition: all .6s
     }
     .landing-page header nav ul li a:hover{transform: scale(2)}
