@@ -5,7 +5,7 @@ setInterval(() => {
   let randomNumber = Math.floor(Math.random() * imgsArray.length);
   landingPage.style.backgroundImage =
     'url("images/' + imgsArray[randomNumber] + '")';
-}, 1000);
+}, 10000);
 //logo
 let logo = document.querySelector(".logo");
 let home = document.querySelectorAll(".home");
