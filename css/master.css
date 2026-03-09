@@ -13,6 +13,10 @@
     margin: 0;
     scroll-behavior: smooth
 }
+::selection{
+    color: var(--text-secondary-color);
+    background-color: var(--text-primary-color)
+}
 body{
     font-family: "Lateef", serif;
     font-style: normal;
@@ -253,32 +257,62 @@ section,footer{height: 100vh}
 /* End events section */
 
 /* Start footer section */
-footer{
-    background-color: var(--secondary-color);
+#Contact{background-color: var(--secondary-color); padding-top: 30px}
+#Contact article:nth-child(1){
+    height: 15%;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+#Contact article:nth-child(1) div{
+    width: 90%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary-color);
+    background-color: var(--button);
+    border-radius: 60px 6px;
+    box-shadow: -5px 5px 10px var(--primary-color)
+}
+#Contact article:nth-child(1) div a{
+    margin-inline: 10px;
+    text-decoration: none;
+    color: var(--text-primary-color);
+    font-weight: bold;
+    font-style: italic
+}
+#Contact article:nth-child(2){height: 70%}
+#Contact article:nth-child(2){
+    padding: 20px;
+    direction: rtl;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#Contact article:nth-child(2) div{
+    width: 50%;
+}
+#Contact article:nth-child(2) div p{
+    margin: 7px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+#Contact article:nth-child(2) div p span{
+    display: block;
+    margin-top: -20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-wrap: wrap;
 }
 /* End footer section */
-
-
-
-
-
-
-
-/*ُedit the colors to media query!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -289,7 +323,6 @@ footer{
     .landing-page header .links{visibility: hidden}
     .landing-page header button{
         font-size: 30px;
-        color: var(--white);
         background-color: transparent;
         border: none;
         visibility: visible;
@@ -303,7 +336,7 @@ footer{
     .landing-page header nav{
         width: 25%;
         color: var(--white);
-        background-color: var(--main-color-2);
+        background-color: var(--primary-color);
         position: absolute;
         top: 0;
         right: 0;
@@ -315,7 +348,7 @@ footer{
     .landing-page header nav ul li{margin: 10px}
     .landing-page header nav ul li a{
         text-decoration: none;
-        color: var(--white)
+        color: var(--secondary-color)
     }
     .landing-page header nav ul li a:hover,
     .landing-page header nav ul li a.active{
@@ -366,5 +399,14 @@ footer{
         background-color: var(--main-color-2)
     }
     /* End events section in sm-screen */
+
+    /* Start footer section in sm-screen */
+    footer{
+        height: fit-content;
+    }
+    #Contact article:nth-child(2) div{
+        width: 100%;
+    }
+    /* End footer section in sm-screen */
 }
 /*End media query for small screen*/ 

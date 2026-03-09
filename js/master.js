@@ -1,7 +1,7 @@
 //change landpage background
 let landingPage = document.querySelector(".landing-page");
 let imgsArray = ["1.jfif", "2.jfif", "3.jfif", "4.jfif", "5.jfif"];
-setInterval(() => {
+let background = setInterval(() => {
   let randomNumber = Math.floor(Math.random() * imgsArray.length);
   landingPage.style.backgroundImage =
     'url("images/' + imgsArray[randomNumber] + '")';

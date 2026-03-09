@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>books</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,38 +13,100 @@
       rel="stylesheet"
     />
     <style>
-      :root {
-        --main-color: #583012;
-        --main-color-2: #a86e45;
-        --second-color: #b4b6b5;
-        --white: #fffffd
+      .landing-page{
+        background-image: none;
+        height: 0;
       }
-      ::-webkit-scrollbar{width: 0}
-      *{
-          box-sizing: border-box;
-          padding: 0;
-          margin: 0;
-          scroll-behavior: smooth
-      }
-      body {
-        font-family: "Lateef", serif;
-        font-style: normal;
-        height: 100vh;
-        background-color: var(--main-color);
-        color: var(--main-color-2);
+      #books{
+        /* min-height: 100vh;*/
+        padding: 20px;
+        height: fit-content;
         display: flex;
-        justify-content: center;
-        align-items: center
+        justify-content: left;
+        flex-wrap: wrap
       }
-      body div{
-        font-size: 150px;
-        letter-spacing: 20px;
-        font-weight: bold;
-        position: relative
+      #books .card{
+        margin: 20px;
       }
     </style>
   </head>
   <body>
-    <div>coming soon</div>
+    <section class="landing-page" id="one">
+      <header>
+        <a href="../index.html" class="logo">آفــــــــــــــاق</a>
+        <!-- <nav>
+            <ul class="links-nav">
+                <li><a href="#one" class="links-nav-li active home">home</a></li>
+                <li><a href="#book" class="links-nav-li">book</a></li>
+                <li><a href="#books" class="links-nav-li">books</a></li>
+                <li><a href="#events" class="links-nav-li">events</a></li>
+                <li><a href="#Contact" class="links-nav-li">Contact</a></li>
+            </ul>
+        </nav>
+        <ul class="links">
+            <li><a href="#one" class="links-li active home">home</a></li>
+            <li><a href="#book" class="links-li">book</a></li>
+            <li><a href="#books" class="links-li">books</a></li>
+            <li><a href="#events" class="links-li">events</a></li>
+            <li><a href="#Contact" class="links-li">Contact</a></li>
+        </ul>
+        <button class="list"><i class="fa-solid fa-list"></i></button> -->
+      </header>
+    </section>
+        <section id="books">
+        <div class="card card-b">
+            <div class="card-inner">
+                <div class="card-front book-1">
+                </div>
+                <div class="card-back book-b1">
+                    <p>نقوش على جدران الزمن العصور القديمة</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front book-2">
+                </div>
+                <div class="card-back book-b2">
+                    <p>مملكة الورقة البيضاء رواية مشتركة</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front book-3">
+                </div>
+                <div class="card-back book-b3">
+                    <p>مملكة الحكايات مجموعة قصصية للأطفال</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="Contact">
+      <article>
+          <div>
+              <p>
+                  انضم إلى آفاق كن جزءًا من مجتمع يقدر الكلمة ويدعم المبدعين منتظرين قلمك وفكرتك عشان نكتب معًا
+              <a href="https://forms.gle/ESNZFHaUhTGH245UA">انضم الآن</a>
+              </p>
+          </div>
+      </article>
+      <article>
+          <div>
+              <p>معالى الوزير / ا.د شريف صالح<span>رئيس جامعة بورسعيد</span></p>
+              <p>محمد ابراهيم المصرى<span>المنسق الطاابي لأسرة طلاب من أجل مصر بالجامعة</span></p>
+              <p>نور خالد أبو المجد<span>منسق مجتمع آفاق جامعة بورسعيد</span></p>
+              <p>الشيماء عبد الحليم غانم<span>نائب المنسق لشئون المحتوى و النشر</span></p>
+              <p>حسين عادل حسين<span>نائب المنسق لشئون التدقيق اللغوى</span></p>
+          </div>
+          <div>
+              <p>ا.م.د / أحمد بيومى<span>المشرف العام على الإدارة العامة لرعاية الطلاب و منسق أسرة طلاب من أجل مصر بالجامعة</span></p>
+              <p>يوسف الشاذلي<span>نائب المنسق الطلابي لأسرة طلاب من أجل مصر</span></p>
+              <p>شهد مصطفى سعد<span>النائب العام لمنسق مجتمع آفاق</span></p>
+              <p>بسنت السيد سيف الدين<span>نائب المنسق لشئون المحتوى و النشر</span></p>
+              <p>حسن عبده ابراهيم شليل<span>نائب المنسق لشئون التنسيق و الكتابة</span></p>
+          </div>
+      </article>
+    </footer>
   </body>
 </html>
