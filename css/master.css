@@ -291,47 +291,40 @@ section,footer{height: 100vh}
     direction: rtl;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
-#Contact article:nth-child(2) div{
-    width: 50%;
-}
+#Contact article:nth-child(2) div{width: 50%}
 #Contact article:nth-child(2) div p{
     margin: 7px;
-    padding: 5px 10px;
+    padding: 7px 20px;
     background-color: var(--primary-color);
     border-radius: 25px;
     color: var(--secondary-color);
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: bold
 }
 #Contact article:nth-child(2) div p span{
     display: block;
-    margin-top: -20px;
+    margin-bottom: 5px;
     font-size: 15px;
     font-weight: 600;
-    text-wrap: wrap;
+    line-height: 20px;
 }
 /* End footer section */
-
-
 
 /*Start media query for small screen*/ 
 @media (max-width : 1024px){
     /* Start landing page section in sm-screen */
-    .landing-page header .logo img{margin-top: 25px}
     .landing-page header .links{visibility: hidden}
     .landing-page header button{
         font-size: 30px;
         background-color: transparent;
         border: none;
         visibility: visible;
-        margin: 10px
+        margin-inline: 10px;
+        margin-top: -60px;
     }
-    .landing-page header button:hover{
-        color: var(--Primary-color);
-        cursor: pointer
-    }
+    .landing-page header button:hover{color: var(--Primary-color); cursor: pointer}
     .landing-page header{position: fixed}
     .landing-page header nav{
         width: 25%;
@@ -346,41 +339,23 @@ section,footer{height: 100vh}
     }
     .landing-page header nav ul{list-style: none}
     .landing-page header nav ul li{margin: 10px}
-    .landing-page header nav ul li a{
-        text-decoration: none;
-        color: var(--secondary-color)
-    }
+    .landing-page header nav ul li a{text-decoration: none; color: var(--secondary-color)}
     .landing-page header nav ul li a:hover,
-    .landing-page header nav ul li a.active{
-        color: var(--Primary-color);
-        transition: all .6s
-    }
+    .landing-page header nav ul li a.active{color: var(--Primary-color); transition: all .6s}
     .landing-page header nav ul li a:hover{transform: scale(2)}
     .landing-page .bio{z-index: 1}
-    .landing-page .bio p{
-        line-height: 30px;
-        font-size: 20px
-    }
+    .landing-page .bio p{line-height: 30px; font-size: 20px}
     /* End landing page section in sm-screen */
     
     /* Start book section in sm-screen */
-    #book{
-        flex-wrap: wrap;
-        height: 100vh
-    }
+    #book{flex-wrap: wrap; height: 100vh}
     #book .card{margin: 25px auto}
     #book .text{margin: 10px}
-    #book .text p{
-        font-size: 25px;
-        line-height: 24px
-    }
+    #book .text p{font-size: 25px; line-height: 24px}
     /* End book section in sm-screen */
     
     /* Start books section in sm-screen */
-    #books .card{
-        height: 200px;
-        margin: 10px
-    }
+    #books .card{height: 200px; margin: 10px}
     #books a,
     #events a{bottom: 15px}
     /* End books section in sm-screen */
@@ -401,12 +376,8 @@ section,footer{height: 100vh}
     /* End events section in sm-screen */
 
     /* Start footer section in sm-screen */
-    footer{
-        height: fit-content;
-    }
-    #Contact article:nth-child(2) div{
-        width: 100%;
-    }
+    footer{height: fit-content}
+    #Contact article:nth-child(2) div{width: 100%}
     /* End footer section in sm-screen */
 }
 /*End media query for small screen*/ 
