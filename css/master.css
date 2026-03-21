@@ -285,8 +285,8 @@ section,footer{height: 100vh}
     font-weight: bold;
     font-style: italic
 }
-#Contact article:nth-child(2){height: 70%}
 #Contact article:nth-child(2){
+    height: 70%;
     padding: 20px;
     direction: rtl;
     display: flex;
