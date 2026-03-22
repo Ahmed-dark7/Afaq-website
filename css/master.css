@@ -374,7 +374,7 @@ section,footer{height: 100vh}
 }
 #Contact article:nth-child(2){
     height: 70%;
-    padding: 20px;
+    padding: 5px 20px;
     direction: rtl;
     display: flex;
     justify-content: space-around;
@@ -395,7 +395,34 @@ section,footer{height: 100vh}
     margin-bottom: 5px;
     font-size: 15px;
     font-weight: 600;
-    line-height: 20px;
+    line-height: 20px
+}
+#Contact article:nth-child(3){
+    height: 15%;
+    width: 100%;
+    /* padding: 5px 30px; */
+    display: flex;
+    justify-content: center
+}
+#Contact article:nth-child(3) div{
+    /* width: 80px; */
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#Contact article:nth-child(3) div p{
+    font-size: 25px;
+    /* margin-right: 20px; */
+    /* direction: ltr; */
+}
+#Contact article:nth-child(3) div a i{
+    color: var(--text-primary-color);
+    font-size: 40px;
+}
+#Contact article:nth-child(3) div a i:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 /* End footer section */
 
