@@ -48,12 +48,13 @@ section,footer{height: 100vh}
 }
 .landing-page header{
     width: 100%;
+    padding-left: 35px;
     z-index: 2;
     position: fixed;
-    display: flex
+    display: flex;
+    align-items: center
 }
 .landing-page header .logo{
-    margin: 8px 15px;
     text-decoration: none;
     font-size: 40px;
     color: var(--text-primary-color)
@@ -136,7 +137,7 @@ section,footer{height: 100vh}
     box-shadow: 0 4px 8px rgba(0,0,0,0.2)
 }
 .card-front{
-    background-image: url(../images/landingPageBook.jpg);
+    background-image: url(../images/Books/landingPageBook.jpg);
     background-size: cover
 }
 .card-back{
@@ -187,89 +188,27 @@ section,footer{height: 100vh}
     position: relative
 }
 #books .card{min-width: 240px}
+#books .card-front{background-size: cover}
 #books .card-back{transform: rotateY(180deg); padding: 20px}
-#books .book-1{
-    background-image: url(../images/book1.jpg);
-    background-size: cover;
-    background-color: #a08870
-}
-#books .book-2{
-    background-image: url(../images/book2.jpg);
-    background-size: cover;
-    background-color: #09161e
-}
-#books .book-3{
-    background-image: url(../images/book3.jpg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-4{
-    background-image: url(../images/book4.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-5{
-    background-image: url(../images/book5.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-6{
-    background-image: url(../images/book6.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-7{
-    background-image: url(../images/book7.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-8{
-    background-image: url(../images/book8.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-9{
-    background-image: url(../images/book9.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-10{
-    background-image: url(../images/book10.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-11{
-    background-image: url(../images/book11.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-12{
-    background-image: url(../images/book12.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-13{
-    background-image: url(../images/book13.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-14{
-    background-image: url(../images/book14.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-15{
-    background-image: url(../images/book15.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
-#books .book-16{
-    background-image: url(../images/book16.jpeg);
-    background-size: cover;
-    background-color: #bbe1ec
-}
+/* add books images */
+#books .book-1{background-image: url(../images/Books/book1.jpg)}
+#books .book-2{background-image: url(../images/Books/book2.jpg)}
+#books .book-3{background-image: url(../images/Books/book3.jpg)}
+#books .book-4{background-image: url(../images/Books/book4.jpeg)}
+#books .book-5{background-image: url(../images/Books/book5.jpeg)}
+#books .book-6{background-image: url(../images/Books/book6.jpeg)}
+#books .book-7{background-image: url(../images/Books/book7.jpeg)}
+#books .book-8{background-image: url(../images/Books/book8.jpeg)}
+#books .book-9{background-image: url(../images/Books/book9.jpeg)}
+#books .book-10{background-image: url(../images/Books/book10.jpeg)}
+#books .book-11{background-image: url(../images/Books/book11.jpeg)}
+#books .book-12{background-image: url(../images/Books/book12.jpeg)}
+#books .book-13{background-image: url(../images/Books/book13.jpeg)}
+#books .book-14{background-image: url(../images/Books/book14.jpeg)}
+#books .book-15{background-image: url(../images/Books/book15.jpeg)}
+#books .book-16{background-image: url(../images/Books/book16.jpeg)}
 #books > a,
-#events a{
+#events > a{
     width: 100%;
     max-width: 400px;
     padding: 5px;
@@ -285,8 +224,8 @@ section,footer{height: 100vh}
     font-weight: bold;
     letter-spacing: 2px
 }
-#books a:hover,
-#events a:hover{
+#books > a:hover,
+#events > a:hover{
     box-shadow: 0 0 10px 8px var(--secondary-color);
     transition: all 0.5s
 }
@@ -305,9 +244,9 @@ section,footer{height: 100vh}
     gap: 35px;
     position: relative
 }
-#events .event{border-radius: 20px; padding: 10px}
-#events .event:nth-child(1){
-    background-image: url(../images/prize.jpg);
+#events .event{
+    padding: 10px;
+    border-radius: 20px;
     background-size: cover
 }
 #events .event:nth-child(2) p{
@@ -316,14 +255,6 @@ section,footer{height: 100vh}
 }
 #events .event:nth-child(4),
 #events .event:nth-child(3){position: relative; overflow: hidden}
-#events .event:nth-child(3){
-    background-image: url(../images/free-pens.jpg);
-    background-size: cover
-}
-#events .event:nth-child(4){
-    background-image: url(../images/course.jpg);
-    background-size: cover
-}
 #events .event:nth-child(3) div,
 #events .event:nth-child(4) div{
     position: absolute;
@@ -337,6 +268,9 @@ section,footer{height: 100vh}
 }
 #events .event:nth-child(3) div p,
 #events .event:nth-child(4) div p{font-size: 25px}
+#events .event:nth-child(1){background-image: url(../images/Events/event1.jpg)}
+#events .event:nth-child(3){background-image: url(../images/Events/event2.jpg)}
+#events .event:nth-child(4){background-image: url(../images/Events/event3.jpg)}
 #events a{
     left: 50%;
     transform: translate(-50%) /*the main style in books section*/
@@ -429,6 +363,7 @@ section,footer{height: 100vh}
 /*Start media query for small screen*/ 
 @media (max-width : 1024px){
     /* Start landing page section in sm-screen */
+    .landing-page header{padding-left: 15px}
     .landing-page header .links{visibility: hidden}
     .landing-page header button{
         font-size: 30px;
