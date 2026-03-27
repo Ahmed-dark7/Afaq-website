@@ -250,7 +250,8 @@ section,footer{height: 100vh}
     background-size: cover
 }
 #events .event:nth-child(2) p{
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 27px;
     color: var(--text-secondary-color)
 }
 #events .event:nth-child(4),
